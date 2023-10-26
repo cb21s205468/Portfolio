@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>portfolio</title>
+    <style>
+        *{
+            text-decoration: none;
+                padding: 0;
+                margin: 0;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: rgb(44, 43, 43);
+            color: white;
+            text-align: center;
+            padding: 70px;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            position: absolute;
+            border-radius: 70%;
+            left: 400px;
+            top: 45px;
+        }
+
+        nav {
+            background-color: blue;
+            box-sizing: content-box;
+            color: #fff;
+            margin-left: 55%;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        nav ul li a:hover
+        {
+            color: white;
+            background-color: blue;
+        }
+
+        .section-content {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+
+        .download-button {
+            background-color: red;
+            color: black;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .download-button:hover {
+            background-color: yellow;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: blue;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        mark{
+            background-color: rgb(195, 241, 28);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Add your profile picture here -->
+            <img src="profile.jpg" alt="Your Profile Picture" class="profile-picture" style="width: 100px;height: 100px;">
+            <h1>Inbatamilarasu</h1>
+            <p>Computer Science Student</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About |</a></li>
+            <li><a href="#education">Education |</a></li>
+            <li><a href="#skills">Skills |</a></li>
+            <li><a href="#projects">Projects |</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2><br>
+            <p>Hello Everyone!!! This is Inbatamilarasu M and i am a computer Science Student.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>B.Sc(CS)</h2><br>
+            <p>Valluvar College of Science and management - CS</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2><br>
+            <li><mark>Python</mark></li>
+            <li><mark>HTML</mark></li>
+            <li><mark>CSS</mark></li>
+            <li><mark>Javascript</mark></li>
+            <li><mark>Artificial Intelligence</mark></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2><br>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 1</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <center>
+        <div class="section-content">
+            <h2>Resume</h2><br>
+            <a href="#" class="download-button">Download</a>
+        </div>
+        </center>
+    </section>
+
+    <footer>
+        <p>&copy; Inbatamilarasu 2023</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling to section when clicking on navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
